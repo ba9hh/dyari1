@@ -104,7 +104,7 @@ const ShopsType = () => {
         </select>
       </div>
       <div className="lg:grid-cols-2 md:grid-cols-2 grid grid-cols-1 gap-x-16 gap-y-20 mx-20 mt-4">
-        {shops.length > 0 ? (
+        {shops?.length > 0 ? (
           shops.map((shop) => <ShopItem key={shop._id} shop={shop} />)
         ) : (
           <h1> empty</h1>
