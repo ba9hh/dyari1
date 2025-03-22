@@ -16,7 +16,7 @@ const path = require('path');
 const app = express()
 app.use(express.json());
 app.use(cookieParser());
-const frontendPath = path.join(__dirname, '../frontend/dist');
+const frontendPath = path.join(__dirname, './frontend/dist');
 app.use(express.static(frontendPath));
 
 mongoose
@@ -33,7 +33,7 @@ app.listen(3000, () => {
   console.log("App is listening to port: 3000");
 });
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+  res.sendFile(path.join(__dirname, './frontend/dist/index.html'));
 });
 app.use(cors({
   origin: 'http://localhost:5173', // Replace with your frontend URL
