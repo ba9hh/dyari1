@@ -14,7 +14,7 @@ const InsideShop = () => {
     const fetchHouse = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${id}`
+          `https://dyari1.onrender.com/api/shop/${id}`
         );
         setShop(response.data);
       } catch (err) {
