@@ -22,7 +22,7 @@ const ShopsType = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/shops/category",
+          "https://dyari1.onrender.com/api/shops/category",
           {
             params: {
               type: shopType,
