@@ -50,6 +50,40 @@ app.get('/api/validateToken', authMiddleware,authController.validateToken);
 app.post('/api/auth/google',authController.googleLogin);
 app.post('/api/logout', authController.logout);
 
+app.get('/api/shops/category', async (req, res) => {
+  try {
+      const { type, localisation, page = "1", limit = "10" } = req.query;
+
+      let query = {};
+      if (type) query.speciality = type;
+      if (localisation) {
+          query.localisation = localisation;
+      }
+      query.isVerified = true;
+      const pageNumber = parseInt(page, 10);
+      const limitNumber = parseInt(limit, 10);
+      const skip = (pageNumber - 1) * limitNumber;
+
+      const shops = await Shop.find(query)
+          .select('name lastName localisation averageRating totalRating speciality profilePicture articles isVerified')
+          .sort({ totalRating: -1 })  // Sort by newest first
+          .skip(skip)
+          .limit(limitNumber);
+
+      const totalShops = await Shop.countDocuments(query);
+
+      res.status(200).json({
+          success: true,
+          totalShops,
+          totalPages: Math.ceil(totalShops / limitNumber),
+          currentPage: pageNumber,
+          shops
+      });
+  } catch (error) {
+      res.status(500).json({ message: "Error fetching shops", error });
+  }
+})
+
 const upload = multer({ storage: multer.memoryStorage() });
 
 app.get('/images', async (req, res) => {
