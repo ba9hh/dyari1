@@ -39,6 +39,11 @@ app.use(cors({
   origin: '*', // Replace with your frontend URL
   credentials: true, // Allow cookies to be sent with requests
 }));
+app.use((req, res, next) => {
+  res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
+  next();
+});
 app.use('/api', shopRoutes);
 app.post('/api/login', authController.login);
 app.get('/api/validateToken', authMiddleware,authController.validateToken);
