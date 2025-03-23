@@ -68,7 +68,7 @@ const ShopsType = () => {
           name="localisation"
           value={localisation}
           onChange={(e) => setLocalisation(e.target.value)}
-          className="h-[36px] text-[#1c1e21] rounded-[4px] px-[8px] pr-[20px] border border-gray-400 w-40 mt-4 sm:mt-0"
+          className="h-[36px] text-[#1c1e21] rounded-[4px] px-[8px] pr-2 sm:pr-[20px] border border-gray-400 w-40 mt-2 sm:mt-0 bg-white"
         >
           <option value="All Countries">All Countries</option>
           {[
@@ -103,7 +103,7 @@ const ShopsType = () => {
           ))}
         </select>
       </div>
-      <div className="lg:grid-cols-2 md:grid-cols-2 grid grid-cols-1 gap-x-16 gap-y-10 sm:gap-y-20 mx-2 sm:mx-20 mt-2 sm:mt-4">
+      <div className="lg:grid-cols-2 md:grid-cols-2 grid grid-cols-1 gap-x-16 gap-y-10 sm:gap-y-20 mx-2 sm:mx-20 mt-1 sm:mt-4">
         {shops?.length > 0 ? (
           shops.map((shop) => <ShopItem key={shop._id} shop={shop} />)
         ) : (
