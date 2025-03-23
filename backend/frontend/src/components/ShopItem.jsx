@@ -45,14 +45,28 @@ const ShopItem = ({ shop }) => {
         </div>
         <div className="flex items-center">
           <h1>{shop.averageRating}</h1>
-          <ReactStars
-            count={5}
-            size={20}
-            value={shop.averageRating || 0}
-            isHalf={true}
-            edit={false}
-            activeColor="#FBBC04"
-          />
+          <div className="block sm:hidden">
+            <ReactStars
+              count={5}
+              size={10} // decreased size for smaller screens
+              value={shop.averageRating || 0}
+              isHalf={true}
+              edit={false}
+              activeColor="#FBBC04"
+            />
+          </div>
+
+          {/* For screens sm and above */}
+          <div className="hidden sm:block">
+            <ReactStars
+              count={5}
+              size={20} // default size for larger screens
+              value={shop.averageRating || 0}
+              isHalf={true}
+              edit={false}
+              activeColor="#FBBC04"
+            />
+          </div>
           <h1>({shop.totalRating})</h1>
         </div>
       </div>
