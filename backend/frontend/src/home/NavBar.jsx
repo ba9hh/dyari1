@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="h-12 flex justify-between items-end pl-8 pr-4">
+      <div className="h-12 flex justify-between items-center sm:items-end pl-8 pr-4">
         <div className="flex items-center gap-1">
           <img className="w-7" src={dyari} />
           <h1 className="text-2xl font-medium text-amber-800">Dyari</h1>
@@ -41,7 +41,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      <div className=" flex w-full justify-center items-center gap-x-4 mt-2 sm:mt-0">
+      <div className=" flex w-full justify-center items-center gap-x-4 mt-5 sm:mt-0">
         <div className="flex-grow border-t border-gray-300"></div>
         <div className="bg-white rounded-full px-1 sm:px-6 py-2 shadow-md">
           <div className="block sm:hidden">
