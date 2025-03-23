@@ -30,7 +30,7 @@ const InsideShop = () => {
         <img className="w-7" src={dyari} />
         <h1 className="text-2xl font-medium text-amber-800">Dyari</h1>
       </Link>
-      <div className="relative w-1/2 bg-white shadow-md rounded-md">
+      <div className="relative w-4/5 sm:w-1/2 bg-white shadow-md rounded-md">
         <Link
           className="absolute top-4 right-2 px-3 pb-2 pt-1 bg-blue-600 text-white text-sm font-medium rounded-md"
           to={"order"}
@@ -85,7 +85,7 @@ const InsideShop = () => {
           <h1>Fait par Samira</h1>
           <div className="flex-grow border-t border-gray-300"></div>
         </div> */}
-      <div className="w-1/2 bg-white shadow-md rounded-md py-3">
+      <div className="w-4/5 sm:w-1/2 bg-white shadow-md rounded-md py-3">
         {/* <div className="flex justify-center mt-2">
           <img className="w-14 h-14" src={profilePost} />
         </div> */}
@@ -99,7 +99,7 @@ const InsideShop = () => {
         <span className="font-medium text-black my-2 ml-7 border-b pb-1 border-gray-700">
           Travail de {shop.name}
         </span>
-        <div className="grid grid-cols-3 gap-x-6 gap-y-6 px-8 mt-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-6 px-8 mt-4">
           {shop.articles?.map((article, index) => (
             <Articles article={article} key={index} />
           ))}

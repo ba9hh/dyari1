@@ -6,7 +6,7 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white shadow-md py-3 px-5 rounded-md"
+      className="bg-white shadow-md py-3 px-2 sm:px-5 rounded-md"
     >
       <div className="flex justify-between items-center">
         <div className="flex gap-2">
@@ -43,21 +43,23 @@ const ShopItem = ({ shop }) => {
             )}
           </div>
         </div>
-        <div className="flex items-center">
-          <h1>{shop.averageRating}</h1>
-          <div className="block sm:hidden">
-            <ReactStars
-              count={5}
-              size={15} // decreased size for smaller screens
-              value={shop.averageRating || 0}
-              isHalf={true}
-              edit={false}
-              activeColor="#FBBC04"
-            />
-          </div>
 
-          {/* For screens sm and above */}
-          <div className="hidden sm:block">
+        <div className="flex sm:hidden items-center">
+          <h1>({shop.totalRating})</h1>
+          <ReactStars
+            count={5}
+            size={15} // decreased size for smaller screens
+            value={shop.averageRating || 0}
+            isHalf={true}
+            edit={false}
+            activeColor="#FBBC04"
+          />
+        </div>
+
+        <div className="hidden sm:block">
+          <div className="flex items-center">
+            {/* For screens sm and above */}
+            <h1>{shop.averageRating}</h1>
             <ReactStars
               count={5}
               size={20} // default size for larger screens
@@ -66,8 +68,8 @@ const ShopItem = ({ shop }) => {
               edit={false}
               activeColor="#FBBC04"
             />
+            <h1>({shop.totalRating})</h1>
           </div>
-          <h1>({shop.totalRating})</h1>
         </div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 border">
