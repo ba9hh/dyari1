@@ -56,7 +56,7 @@ const ShopItem = ({ shop }) => {
           <h1>({shop.totalRating})</h1>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-1 mt-1 border">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 border">
         <img
           className="w-full h-56 border object-cover"
           src={shop.articles[0]?.image || biscuit50}
