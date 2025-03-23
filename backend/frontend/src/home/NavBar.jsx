@@ -41,7 +41,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      <div className=" flex w-full justify-center items-center gap-x-4">
+      <div className=" flex w-full justify-center items-center gap-x-4 mt-2 sm:mt-0">
         <div className="flex-grow border-t border-gray-300"></div>
         <div className="bg-white rounded-full px-1 sm:px-6 py-2 shadow-md">
           <div className="block sm:hidden">
@@ -60,7 +60,7 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
-          <div className="block sm:block">
+          <div className="hidden sm:block">
             {categories.map((category) => (
               <Link
                 key={category.link}

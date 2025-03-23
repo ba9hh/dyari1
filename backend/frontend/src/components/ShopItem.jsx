@@ -48,7 +48,7 @@ const ShopItem = ({ shop }) => {
           <div className="block sm:hidden">
             <ReactStars
               count={5}
-              size={10} // decreased size for smaller screens
+              size={15} // decreased size for smaller screens
               value={shop.averageRating || 0}
               isHalf={true}
               edit={false}
