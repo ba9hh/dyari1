@@ -96,7 +96,7 @@ const Order = () => {
     console.log(user)
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/shop/${id}/orders`,
+        `https://dyari1.onrender.com/api/shop/${id}/orders`,
         order
       );
 
@@ -111,7 +111,7 @@ const Order = () => {
     const fetchHouse = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/shop/${id}`
+          `https://dyari1.onrender.com/api/shop/${id}`
         );
         setShopData(response.data.articles); // Set the house state with the fetched data
       } catch (err) {

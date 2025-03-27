@@ -15,7 +15,7 @@ const Account = () => {
   const updateOrderState = async (shopId, userId, orderId, newState) => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/shopsandusers/${shopId}/${userId}/orders/${orderId}/state`,
+        `https://dyari1.onrender.com/api/shopsandusers/${shopId}/${userId}/orders/${orderId}/state`,
         {
           state: newState,
         }

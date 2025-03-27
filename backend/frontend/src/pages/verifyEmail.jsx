@@ -41,7 +41,7 @@ const VerifyEmail = () => {
             const otpArray =inputRefs.current.map(e => e.value)
             const otp = otpArray.join('')
             console.log(typeof otp)
-            const response = await axios.post("http://localhost:3000/api/verify-shop", { email, verificationCode :otp });
+            const response = await axios.post("https://dyari1.onrender.com/api/verify-shop", { email, verificationCode :otp });
             
           console.log(response)
       if (response.status==200) {
