@@ -93,7 +93,7 @@ const UpdateName = () => {
 
       try {
         const uploadResponse = await axios.post(
-          "http://localhost:3000/upload",
+          "https://dyari1.onrender.com/upload",
           formData,
           { headers: { "Content-Type": "multipart/form-data" } }
         );
@@ -108,7 +108,7 @@ const UpdateName = () => {
     // Now add the article with the (possibly updated) image URL to the shop
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/shop/${user._id}/article`,
+        `https://dyari1.onrender.com/api/shop/${user._id}/article`,
         updatedArticle
       );
       setUser(response.data.shop);
@@ -124,7 +124,7 @@ const UpdateName = () => {
   const deleteArticle = async (articleId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/shop/${user._id}/article/${articleId}`
+        `https://dyari1.onrender.com/api/shop/${user._id}/article/${articleId}`
       );
       setUser(response.data.shop);
       alert("article deleted");
