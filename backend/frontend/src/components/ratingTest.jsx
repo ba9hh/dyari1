@@ -8,7 +8,7 @@ const RatingTest = ({ shopId, user }) => {
 
   useEffect(() => {
     // Fetch user's previous rating (optional)
-    axios.get(`http://localhost:3000/api/shop/${shopId}`).then((response) => {
+    axios.get(`https://dyari1.onrender.com/api/shop/${shopId}`).then((response) => {
       const shop = response.data;
       console.log(shop);
       const userRating =
@@ -22,7 +22,7 @@ const RatingTest = ({ shopId, user }) => {
     // Send rating to backend
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/shop/${shopId}/rate`,
+        `https://dyari1.onrender.com/api/shop/${shopId}/rate`,
         { rating: rating },
         { withCredentials: true }
       );

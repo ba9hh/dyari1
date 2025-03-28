@@ -203,7 +203,7 @@ const AuthVendorRegister = () => {
 
           try {
             const response = await axios.post(
-              "http://localhost:3000/upload",
+              "https://dyari1.onrender.com/upload",
               formData1,
               {
                 headers: { "Content-Type": "multipart/form-data" },
@@ -228,7 +228,7 @@ const AuthVendorRegister = () => {
         formData2.append("image", formData.profilePicture);
         try {
           const response = await axios.post(
-            "http://localhost:3000/upload",
+            "https://dyari1.onrender.com/upload",
             formData2,
             {
               headers: { "Content-Type": "multipart/form-data" },
@@ -256,7 +256,7 @@ const AuthVendorRegister = () => {
       };
 
       const res = await axios.post(
-        "http://localhost:3000/api/shop",
+        "https://dyari1.onrender.com/api/shop",
         finalFormData,
         {
           headers: { "Content-Type": "application/json" },
