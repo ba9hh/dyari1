@@ -74,27 +74,27 @@ const ShopItem = ({ shop }) => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 border">
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[0]?.image || biscuit50}
         />
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[1]?.image || biscuit50}
         />
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[2]?.image || biscuit50}
         />
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[3]?.image || biscuit50}
         />
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[4]?.image || biscuit50}
         />
         <img
-          className="w-full h-56 border object-cover"
+          className="w-full aspect-[12/16] border object-cover"
           src={shop.articles[5]?.image || biscuit50}
         />
       </div>
