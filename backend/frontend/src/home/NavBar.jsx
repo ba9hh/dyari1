@@ -9,11 +9,11 @@ const NavBar = () => {
   const { type } = useParams();
   const [navbarElement, setNavbarElement] = useState(type || "");
   const categories = [
-    { name: "Les salés",nameSm:"salés", link: "sales" },
-    { name: "Les sucres",nameSm:"sucres", link: "sucres" },
-    { name: "Un mélange",nameSm:"mélange", link: "" }, // If applicable
-    { name: "Les gateaux",nameSm:"gateaux", link: "gateaux" },
-    { name: "Les biscuits",nameSm:"biscuits", link: "biscuit" },
+    { name: "Les salés 🍕",nameSm:"salés 🍕", link: "sales" },
+    { name: "Les sucrés 🍩",nameSm:"sucrés 🍩", link: "sucres" },
+    { name: "Un mélange 🍱",nameSm:"mélange 🍱", link: "" }, // If applicable
+    { name: "Les gâteaux 🎂",nameSm:"gâteaux 🎂", link: "gateaux" },
+    { name: "Les biscuits 🍪",nameSm:"biscuits 🍪", link: "biscuit" },
   ];
 
   return (
