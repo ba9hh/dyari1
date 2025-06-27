@@ -11,9 +11,15 @@ const NavBar = () => {
   const categories = [
     { name: "Les salés 🍕",nameSm:"salés 🍕", link: "sales" },
     { name: "Les sucrés 🍩",nameSm:"sucrés 🍩", link: "sucres" },
-    { name: "Un mélange 🍱",nameSm:"mélange 🍱", link: "" }, // If applicable
+    { name: "Un mélange 🍱",nameSm:"mélange 🍱", link: "" }, 
     { name: "Les gâteaux 🎂",nameSm:"gâteaux 🎂", link: "gateaux" },
     { name: "Les biscuits 🍪",nameSm:"biscuits 🍪", link: "biscuit" },
+  ];
+  const categoriesSm = [
+    { name: "Un mélange 🍱",nameSm:"mélange 🍱", link: "" }, 
+    { name: "Les salés 🍕",nameSm:"salés 🍕", link: "sales" },
+    { name: "Les sucrés 🍩",nameSm:"sucrés 🍩", link: "sucres" },
+    { name: "Les gâteaux 🎂",nameSm:"gâteaux 🎂", link: "gateaux" },
   ];
 
   return (
@@ -45,11 +51,11 @@ const NavBar = () => {
         <div className="flex-grow border-t border-gray-300"></div>
         <div className="bg-white sm:rounded-full px-0.5 sm:px-6 py-2 shadow-md">
           <div className="block sm:hidden">
-            {categories.map((category) => (
+            {categoriesSm.map((category) => (
               <Link
                 key={category.link}
                 to={`/${category.link}`}
-                className={`pr-1 py-2 ${
+                className={`px-1 py-2 ${
                   navbarElement == category.link
                     ? "border-b-[4px] border-amber-400"
                     : ""
