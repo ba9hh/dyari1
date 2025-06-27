@@ -6,9 +6,9 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white shadow-md py-3 px-2 sm:px-5 rounded-md"
+      className="bg-white shadow-md py-3 sm:px-5 rounded-md"
     >
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center px-2 sm:px-0">
         <div className="flex gap-2">
           <img
             className="w-10 h-10 rounded-full border"
