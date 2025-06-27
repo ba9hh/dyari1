@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="h-12 flex justify-between items-center sm:items-end sm:pl-8 pl-1 pr-4 sm:border-b-0 border-b border-gray-300">
+      <div className="h-12 flex justify-between items-center sm:items-end sm:pl-8 pl-1 pr-4 sm:border-b-0 border-b-2 border-gray-300 pb-1 sm:pb-0">
         <div className="flex items-center gap-1">
           <img className="w-7" src={dyari} />
           <h1 className="text-2xl font-medium text-amber-800">Dyari</h1>
@@ -39,7 +39,7 @@ const NavBar = () => {
             </Link>
           ) : (
             <Link
-              className="px-2 pb-1 rounded-lg border-2 text-amber-700 border-amber-500 shadow-lg"
+              className="px-2 pb-1 rounded-lg border-2 text-amber-700 border-amber-500 sm:shadow-lg"
               to={"/auth"}
             >
               se connecter
