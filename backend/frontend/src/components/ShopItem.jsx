@@ -6,7 +6,7 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white shadow-md py-3 sm:px-5 rounded-md"
+      className="bg-white sm:border-y-0 border-y-2 border-gray-300 sm:shadow-md py-3 sm:px-5 rounded-md"
     >
       <div className="flex justify-between items-center px-2 sm:px-0">
         <div className="flex gap-2">
@@ -73,30 +73,23 @@ const ShopItem = ({ shop }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 border">
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[0]?.image || biscuit50}
-        />
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[1]?.image || biscuit50}
-        />
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[2]?.image || biscuit50}
-        />
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[3]?.image || biscuit50}
-        />
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[4]?.image || biscuit50}
-        />
-        <img
-          className="w-full aspect-[12/16] border object-cover"
-          src={shop.articles[5]?.image || biscuit50}
-        />
+        {shop.articles
+          .slice(0, 6)
+          .map((article, index) =>
+            article?.image ? (
+              <img
+                key={index}
+                className="w-full aspect-[12/16] border object-cover"
+                src={article.image}
+              />
+            ) : (
+              <img
+                key={index}
+                className="w-full aspect-[12/16] border object-cover sm:hidden"
+                src={biscuit50}
+              />
+            )
+          )}
       </div>
     </Link>
   );
