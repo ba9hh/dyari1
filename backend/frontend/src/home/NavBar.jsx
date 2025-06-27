@@ -43,13 +43,13 @@ const NavBar = () => {
       </div>
       <div className=" flex w-full justify-center items-center sm:gap-x-4 gap-x-1 mt-2 sm:mt-0">
         <div className="flex-grow border-t border-gray-300"></div>
-        <div className="bg-white rounded-full px-0.5 sm:px-6 py-2 shadow-md">
+        <div className="bg-white sm:rounded-full px-0.5 sm:px-6 py-2 shadow-md">
           <div className="block sm:hidden">
             {categories.map((category) => (
               <Link
                 key={category.link}
                 to={`/${category.link}`}
-                className={`px-3 py-2 ${
+                className={`pr-1 py-2 ${
                   navbarElement == category.link
                     ? "border-b-[4px] border-amber-400"
                     : ""
