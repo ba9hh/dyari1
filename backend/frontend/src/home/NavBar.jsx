@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="h-12 flex justify-between items-center sm:items-end pl-8 pr-4">
+      <div className="h-12 flex justify-between items-center sm:items-end sm:pl-8 pl-1 pr-4">
         <div className="flex items-center gap-1">
           <img className="w-7" src={dyari} />
           <h1 className="text-2xl font-medium text-amber-800">Dyari</h1>
