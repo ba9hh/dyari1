@@ -61,7 +61,7 @@ const ShopsType = () => {
       </div>
     );
   return (
-    <div className="bg-[#f5f5f5]">
+    <div className="sm:bg-[#f5f5f5] bg-white">
       <NavBar />
       <div className="flex justify-end py-3 px-2 sm:px-8">
         <select
