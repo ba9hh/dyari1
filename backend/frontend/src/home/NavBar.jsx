@@ -49,7 +49,7 @@ const NavBar = () => {
           ) : (
             <div>
               <Link
-                className="px-2 pb-1 rounded-lg border-2 text-amber-700 border-amber-500 sm:shadow-lg"
+                className="px-2 pb-1 rounded-lg border-2 text-amber-700 border-amber-500 shadow-lg hidden sm:block"
                 to={"/auth"}
               >
                 se connecter
