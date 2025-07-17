@@ -5,6 +5,7 @@ import axios from "axios";
 import SkeletonShops from "../components/SkeletonShops";
 import NavBar from "./NavBar";
 import ShopItem from "../components/ShopItem";
+import {FormControl ,MenuItem ,Select} from "@mui/material"
 
 const ShopsType = () => {
   const { type } = useParams();
@@ -55,7 +56,7 @@ const ShopsType = () => {
   };
   if (loading)
     return (
-      <div className="bg-[#f5f5f5]">
+      <div className="sm:bg-[#f5f5f5] bg-white">
         <NavBar />
         <SkeletonShops />
       </div>
@@ -63,6 +64,26 @@ const ShopsType = () => {
   return (
     <div className="sm:bg-[#f5f5f5] bg-white">
       <NavBar />
+      <div className="block sm:hidden">
+        <FormControl fullWidth>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={age}
+            label="Age"
+            onChange={handleChange}
+            sx={{
+              "& .MuiSelect-select": {
+                textAlign: "center",
+              },
+            }}
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
       <div className="sm:flex justify-end py-3 px-2 sm:px-8 hidden">
         <select
           name="localisation"

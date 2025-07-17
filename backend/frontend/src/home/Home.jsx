@@ -6,7 +6,7 @@ import downArrow from "../assets/downArrow.png";
 
 const Home = () => {
   return (
-    <div className="bg-[#f5f5f5]">
+    <div className="sm:bg-[#f5f5f5] bg-white">
       <NavBar />
       <Shops />
     </div>
