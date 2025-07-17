@@ -54,6 +54,11 @@ const ShopsType = () => {
   const handleNext = () => {
     if (page < totalPages) setPage(page + 1);
   };
+   const [age, setAge] = useState(10);
+
+  const handleChange1 = (event) => {
+    setAge(event.target.value);
+  };
   if (loading)
     return (
       <div className="sm:bg-[#f5f5f5] bg-white">
@@ -71,7 +76,7 @@ const ShopsType = () => {
             id="demo-simple-select"
             value={age}
             label="Age"
-            onChange={handleChange}
+            onChange={handleChange1}
             sx={{
               "& .MuiSelect-select": {
                 textAlign: "center",
