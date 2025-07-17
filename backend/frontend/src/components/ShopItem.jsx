@@ -6,7 +6,7 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white sm:border-y-0 border-gray-300 sm:shadow-md py-3 sm:px-5 sm:rounded-md"
+      className="bg-white sm:border-y-0 border-gray-300 sm:shadow-md pt-3 sm:px-5 sm:rounded-md" 
     >
       <div className="flex justify-between items-center px-2 sm:px-0">
         <div className="flex gap-2">

@@ -33,7 +33,7 @@ const NavBar = () => {
   };
   return (
     <div>
-      <div className="h-fit sm:h-12 flex justify-between items-end w-full sm:pl-8 px-2 sm:pr-4 border sm:pb-0 py-3">
+      <div className="h-fit sm:h-12 flex justify-between items-end w-full sm:pl-8 px-2 sm:pr-4 border sm:pb-0 pb-3">
         <div className="flex items-center gap-1">
           <img className="w-7" src={dyari} />
           <h1 className="text-2xl font-medium text-amber-800">Dyari</h1>
