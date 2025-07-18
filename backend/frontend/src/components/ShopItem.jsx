@@ -6,7 +6,7 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white sm:border-y-0 sm:shadow-md pt-3 sm:px-5 sm:rounded-md sm:border-b-0 border-b-[10px] border-gray-100" 
+      className="bg-white sm:border-y-0 sm:shadow-md pb-3 pt-3 sm:px-5 sm:rounded-md sm:border-b-0 border-b-[4px] border-gray-300" 
     >
       <div className="flex justify-between items-center px-2 sm:px-0">
         <div className="flex gap-2">
@@ -72,7 +72,7 @@ const ShopItem = ({ shop }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 sm:border-b-0 border-b-[3px] border-gray-300 sm:px-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 sm:px-5">
         {shop.articles?.slice(0, 6).map((article, index) => {
           // hide index 4 & 5 on xs, show from sm+
           const hideOnXs = index >= 4 ? "hidden sm:block" : "";
