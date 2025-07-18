@@ -14,7 +14,7 @@ const Auth = () => {
       </Link>
       <h1 className=" text-amber-600">Se connecter en mode :</h1>
       <div className="flex justify-center gap-6">
-        <div className="w-[26%] flex flex-col gap-y-5 ">
+        <div className="sm:w-[26%] flex flex-col gap-y-5 w-1/2">
           
           <Link to={"/auth/customer"} className="bg-white px-10 py-3 rounded-md shadow-md hover:bg-gray-100 cursor-pointer">
             <h1>
@@ -26,7 +26,7 @@ const Auth = () => {
             <img src={customer} className="w-full h-full object-cover" />
           </Link>
         </div>
-        <div className="w-[26%] flex flex-col gap-y-5 ">
+        <div className="sm:w-[26%] flex flex-col gap-y-5 w-1/2">
           <Link to={"/auth/vendor"} className="bg-white px-10 py-3 rounded-md shadow-md hover:bg-gray-100 cursor-pointer">
             <h1>
               <span className="font-semibold">Vendeur</span> : Pour publier vos

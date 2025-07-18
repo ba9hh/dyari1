@@ -6,7 +6,7 @@ const ShopItem = ({ shop }) => {
   return (
     <Link
       to={`/insideshop/${shop._id}`}
-      className="bg-white sm:border-y-0 border-gray-300 sm:shadow-md pt-3 sm:px-5 sm:rounded-md" 
+      className="bg-white sm:border-y-0 sm:shadow-md pt-3 sm:px-5 sm:rounded-md sm:border-b-0 border-b-[10px] border-gray-100" 
     >
       <div className="flex justify-between items-center px-2 sm:px-0">
         <div className="flex gap-2">
@@ -72,24 +72,19 @@ const ShopItem = ({ shop }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 border">
-        {shop.articles
-          .slice(0, 6)
-          .map((article, index) =>
-            article?.image ? (
-              <img
-                key={index}
-                className="w-full aspect-[12/16] border object-cover"
-                src={article.image}
-              />
-            ) : (
-              <img
-                key={index}
-                className="w-full aspect-[12/16] border object-cover sm:hidden"
-                src={biscuit50}
-              />
-            )
-          )}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-1 sm:border-b-0 border-b-[3px] border-gray-300 sm:px-5">
+        {shop.articles?.slice(0, 6).map((article, index) => {
+          // hide index 4 & 5 on xs, show from sm+
+          const hideOnXs = index >= 4 ? "hidden sm:block" : "";
+
+          return (
+            <img
+              key={index}
+              className={`${hideOnXs} w-full aspect-[12/16] border object-cover`}
+              src={article?.articleImage ?? biscuit50}
+            />
+          );
+        })}
       </div>
     </Link>
   );
