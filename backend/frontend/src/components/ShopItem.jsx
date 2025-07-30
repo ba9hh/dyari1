@@ -73,7 +73,7 @@ const ShopItem = ({ shop }) => {
         </div>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 mt-3 sm:mt-1 sm:px-5">
-        {shop.articles?.slice(0, 6).map((article, index) => {
+        {shop.articles?.slice(0, 3).map((article, index) => {
           // hide index 4 & 5 on xs, show from sm+
           const hideOnXs = index >= 4 ? "hidden sm:block" : "";
 
